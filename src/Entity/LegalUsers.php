@@ -15,11 +15,11 @@ class LegalUsers
 
     #[ORM\OneToOne(inversedBy: 'legalUsers', cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
-    private ?user $user = null;
+    private ?User $user = null;
 
     #[ORM\OneToOne(inversedBy: 'legalUsers', cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
-    private ?legal $legal = null;
+    private ?Legal $legal = null;
 
     public function getId(): ?int
     {
@@ -31,19 +31,19 @@ class LegalUsers
         return $this->user;
     }
 
-    public function setUser(user $user): self
+    public function setUser(User $user): self
     {
         $this->user = $user;
 
         return $this;
     }
 
-    public function getLegal(): ?legal
+    public function getLegal(): ?Legal
     {
         return $this->legal;
     }
 
-    public function setLegal(legal $legal): self
+    public function setLegal(Legal $legal): self
     {
         $this->legal = $legal;
 

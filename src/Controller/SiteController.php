@@ -59,7 +59,7 @@ class SiteController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $form->getData();
             $user->setPassword($passwordHasher->hashPassword($user, $form->get('password')->getData()));
-            $user->setRoles([$form->get('typeOfFace')->getData()]);
+            $user->setRoles($user->getRoles());
             $entityManager->getRepository(User::class)->save($user);
             $entityManager->flush();
             $rememberMe = new RememberMeBadge();

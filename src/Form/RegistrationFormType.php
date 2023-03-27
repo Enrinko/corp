@@ -78,7 +78,8 @@ class RegistrationFormType extends AbstractType
                 ],
             ])
             ->add('captcha', ReCaptchaType::class, [
-                'required' => true
+                'required' => true,
+                'invalid_message' => 'Пройдите капчу, чтобы продолжить',
             ])
             ->add('isAgreed', CheckboxType::class, [
                 'label' => 'Согласен с Политикой конфиденциальности и Условиями пользования'

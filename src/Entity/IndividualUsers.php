@@ -15,7 +15,7 @@ class IndividualUsers
 
     #[ORM\OneToOne(inversedBy: 'individualUsers', cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
-    private ?user $user = null;
+    private ?User $user = null;
 
     #[ORM\OneToOne(inversedBy: 'individualUser', cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
@@ -25,12 +25,12 @@ class IndividualUsers
         return $this->id;
     }
 
-    public function getUser(): ?user
+    public function getUser(): ?User
     {
         return $this->user;
     }
 
-    public function setUser(user $user): self
+    public function setUser(User $user): self
     {
         $this->user = $user;
 
