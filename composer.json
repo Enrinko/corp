@@ -9,14 +9,23 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "doctrine/doctrine-bundle": "^2.9",
+        "doctrine/doctrine-migrations-bundle": "^3.2",
+        "doctrine/orm": "^2.14",
+        "mhujer/breadcrumbs-bundle": "^1.5",
+        "symfony/asset": "6.2.*",
         "symfony/console": "6.2.*",
         "symfony/dotenv": "6.2.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "6.2.*",
+        "symfony/mailer": "6.2.*",
+        "symfony/maker-bundle": "^1.48",
+        "symfony/monolog-bundle": "^3.8",
         "symfony/runtime": "6.2.*",
-        "symfony/yaml": "6.2.*"
-    },
-    "require-dev": {
+        "symfony/security-bundle": "6.2.*",
+        "symfony/security-csrf": "6.2.*",
+        "symfony/yaml": "6.2.*",
+        "victor-prdh/recaptcha-bundle": "^1.6"
     },
     "config": {
         "allow-plugins": {
@@ -62,8 +71,13 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false,
-            "require": "6.2.*"
+            "allow-contrib": true,
+            "require": "6.2.*",
+            "docker": true
         }
+    },
+    "require-dev": {
+        "symfony/stopwatch": "6.2.*",
+        "symfony/web-profiler-bundle": "6.2.*"
     }
 }

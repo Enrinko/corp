@@ -1,5 +1,15 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+reg:
+    path: /reg
+    controller: App\Controller\SiteController::reg
+login:
+    path: /login
+    controller: App\Controller\SiteController::login
+mainPage:
+    path: /
+    controller: App\Controller\SiteController::index
+logout:
+    path: /logout
+    controller: App\Controller\SiteController::logout
+userCab:
+    path: /userCab
+    controller: App\Controller\SiteController::userCab

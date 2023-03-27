@@ -1,0 +1,3 @@
+framework:
+    mailer:
+        dsn: 'smtp://smtp.gmail.com:587?encryption=tls&auth_mode=login&username=noreply@beloraclub.ru&password=192837465@Pochta'

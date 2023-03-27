@@ -1,0 +1,145 @@
+
+body {
+    background: #f2f2f2;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: auto auto;
+}
+
+.logo {
+    width: 747px;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(38, 38, 38, 0.2) 0%, rgba(132, 217, 138, 0.1) 87.45%), #3D7340;
+}
+
+.logo-img {
+    position: relative;
+    max-width: 300px;
+    max-height: 280px;
+    margin: auto;
+    top: 35%;
+    left: 27.8%;
+}
+
+.login {
+    width: 384px;
+    height: 333px;
+    position: absolute;
+    margin: auto;
+    top: 25vh;
+    left: 60vw;
+}
+
+.title {
+    position: relative;
+    color: #262626;
+    width: 120px;
+    height: 55px;
+    font-size: 2em;
+    line-height: 55px;
+    left: 15%;
+}
+
+.form-floating input {
+    background: #ffffff;
+    border: 3px solid rgba(61, 115, 64, 0.75);
+    color: rgba(38, 40, 64, 0.5);
+    text-indent: 30px;
+    outline: none;
+}
+
+.form-floating:first-of-type input {
+    border-radius: 15px 15px 0 0;
+}
+
+.form-floating:not(:first-of-type, :last-of-type) input {
+    border-radius: 0 0 0 0;
+}
+
+.form-floating:last-of-type input {
+    border-radius: 0 0 15px 15px;
+}
+
+.form-floating input:focus {
+    border-color: #a68a56;
+}
+
+.login button[type=submit] {
+    color: #ffffff;
+    background: #3D7340;
+    border-radius: 15px;
+}
+
+.login button[type=submit]:hover {
+    background: #a68a56;
+}
+
+.login button[type=submit]:active {
+    transition: all 0.05s ease-in-out;
+    background: rgba(166, 138, 86, 0.5);
+}
+
+.bottom-title {
+    display: grid;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgba(61, 115, 64, 0.75);
+    font-size: 22px;
+    line-height: 30px;
+}
+
+@media (max-width: 1366px) {
+    .logo {
+        width: 530px;
+    }
+
+    .login {
+        top: 20vh;
+        left: 57%;
+    }
+
+    .logo-img {
+        width: 231px;
+        height: 338px;
+        top: 25%;
+        left: 25%;
+    }
+
+    .title {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .field {
+        width: 280px;
+        height: 50px;
+        border: 2px solid rgba(61, 115, 64, 0.75);
+        font-size: 15px;
+        margin-top: 40px;
+        margin-left: 52px;
+    }
+
+    .field[type=submit] {
+        width: 180px;
+        height: 60px;
+        font-size: 17px;
+        border-radius: 15px;
+        margin-left: 100px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .link {
+        text-decoration: none;
+        color: rgba(61, 115, 64, 0.75);
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
